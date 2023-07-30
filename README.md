@@ -7,6 +7,6 @@
 # In MainActivity the stopwatch is working with handler timer. It's showing Milliseconds, Second and minutes
 
 # -------Output-------
-![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s1.jpg)
-![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s2.jpg)
-![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s3.jpg)
+![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s1.png)
+![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s2.png)
+![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s3.png)
