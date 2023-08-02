@@ -9,6 +9,6 @@
 # Resume the timer with previous time when it back to the on screen
 
 # -------Output-------
-![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s1.jpg)
-![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s2.png)
-![alt text](https://github.com/bijoy-cwl/StopWatch/blob/main/screenshots/s3.png)
+![alt text](https://github.com/bijoy-cwl/StopWatchWithActivityState/blob/main/screenshots/s1.jpg)
+![alt text](https://github.com/bijoy-cwl/StopWatchWithActivityState/blob/main/screenshots/s2.png)
+![alt text](https://github.com/bijoy-cwl/StopWatchWithActivityState/blob/main/screenshots/s3.png)
