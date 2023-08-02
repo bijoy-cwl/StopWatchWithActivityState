@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        showToast("onCreate");
 
         timeTV = findViewById(R.id.timeTV);
         playPauseLL = findViewById(R.id.playPauseLL);
@@ -88,6 +91,49 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        showToast("onStart");
+        if (running){
+            state = State.PLAY;
+            updateUI(state);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showToast("onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        showToast("onPause");
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        showToast("onStop");
+        if (running){
+            state = State.PAUSE;
+            running = false;
+            updateUI(state);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        state = State.INIT;
+        running = false;
+        second = 0;
+        super.onDestroy();
+        showToast("onDestroy");
+    }
+
 
     private void runTimer() {
         Handler handler = new Handler();
@@ -127,14 +173,18 @@ public class MainActivity extends AppCompatActivity {
 //        int secondS = second % 60;
 
         DateFormat format = new SimpleDateFormat("mm:ss:SS", Locale.getDefault());
-         timeString = format.format(second);
+        timeString = format.format(second);
 
 //        timeString = String.format(Locale.getDefault(), "%02d:%02d:%02d", hour, minutes, secondS);
 
         timeTV.setText(timeString);
         if (running) {
-           // second++;
+            // second++;
             second += 10;
         }
+    }
+
+    private void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
